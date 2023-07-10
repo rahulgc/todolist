@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(180, 255, 255);
+
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: max-content;
+}
+.todocontainer{
+   height: max-content;
+   margin-top: 20px;
+   width: 25%;
+   margin-left: 10px;
+}
+.input{
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+}
+.submit{
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+    background: green;
+    color: white;
+}
+.delete{
+    margin: 5px;
+    padding: 5px;
+    width: 60px;
+    background: rgb(128, 0, 0);
+    color: white;
+}
+.display{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 75%;
+}
+.todoeach{
+    width: max-content;
+    height: max-content;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 15%;
+}
+.todoeach:hover{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.del{
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+    background: red;
+    margin-top: 0;
+}
