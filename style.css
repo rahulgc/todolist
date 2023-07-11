@@ -7,7 +7,7 @@ body{
 
 }
 .container{
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: space-around;
     height: max-content;
@@ -15,8 +15,9 @@ body{
 .todocontainer{
    height: max-content;
    margin-top: 20px;
-   width: 25%;
+   width: max-content;
    margin-left: 10px;
+   position: relative;
 }
 .input{
     width: 250px;
@@ -39,12 +40,12 @@ body{
 }
 .display{
     display: flex;
-    margin: 10px;
+    flex-wrap: wrap;
+    margin: 40px;
     padding: 10px;
-    width: 75%;
 }
 .todoeach{
-    width: max-content;
+    width: 10%;
     height: max-content;
     margin: 10px;
     padding: 10px;
@@ -60,4 +61,95 @@ body{
     color: rgb(0, 0, 0);
     background: red;
     margin-top: 0;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: red;
+    font-weight: 1000;
+}
+@media only screen and (max-width:600px) {
+
+    body{
+        background-color: rgb(238, 186, 126);
+    
+    }
+    .container{
+        height: max-content;
+        display: block;
+    }
+    .todocontainer{
+       height: max-content;
+       margin-top: 20px;
+       width: 25%;
+       margin-left: 10px;
+    }
+    .input{
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+    }
+    .submit{
+        margin: 5px;
+        padding: 5px;
+        width: 60px;
+        background: green;
+        color: white;
+    }
+    .delete{
+        margin: 5px;
+        padding: 5px;
+        width: 60px;
+        background: rgb(128, 0, 0);
+        color: white;
+    }
+    .display{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        padding: 10px;
+    }
+    .todoeach{
+        width: 10%;
+        height: max-content;
+        margin: 10px;
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 15%;
+    }
+    .todoeach:hover{
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    .del{
+        margin-top: 0;
+        color: rgb(0, 0, 0);
+        background: red;
+        margin-top: 0;
+    }
+    
+}
+@media only screen and (max-width:1080px) {
+    .display{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 40px;
+        padding: 10px;
+    }
+    .todoeach{
+        width: 10%;
+        height: max-content;
+        margin: 10px;
+        padding: 10px;
+        background: rgb(255, 255, 255);
+        border-radius: 15%;
+    }
+    .todocontainer{
+        height: max-content;
+        margin-top: 20px;
+        width: 50%;
+        margin-left: 10px;
+     }
 }
