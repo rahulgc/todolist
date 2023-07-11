@@ -138,12 +138,6 @@ body{
         margin: 40px;
         padding: 10px;
     }
-    .display{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 40px;
-        padding: 10px;
-    }
     .todoeach{
         width: max-content;
         height: max-content;
