@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: rgb(180, 255, 255);
+    background-color: rgb(40, 61, 61);
 
 }
 .container{
@@ -53,27 +53,36 @@ body{
     border-radius: 15%;
 }
 .todoeach:hover{
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    transform: scale(1.15,1.15);
 }
 .del{
-    margin-top: 0;
     color: rgb(0, 0, 0);
     background: red;
-    margin-top: 0;
+    float: right;
 }
 .heading{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: red;
+    color: rgb(255, 255, 255);
     font-weight: 1000;
+}
+.todoeachAlarm{
+    width: 200px;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(254, 0, 0);
+    border-radius: 15%;
 }
 @media only screen and (max-width:600px) {
 
     body{
-        background-color: rgb(238, 186, 126);
+        background-color: rgb(40, 61, 61);
     
     }
     .container{
@@ -120,14 +129,12 @@ body{
         border-radius: 15%;
     }
     .todoeach:hover{
-        background: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
+        transform:scale(1.1,1.1);
     }
     .del{
-        margin-top: 0;
         color: rgb(0, 0, 0);
         background: red;
-        margin-top: 0;
+        float: right;
     }
     
 }
