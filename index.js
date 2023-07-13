@@ -54,8 +54,6 @@ const del = (e) => {
 
 const alarm = (e) => {
   e.preventDefault();
-  e.target.style.background = "green";
-  e.target.innerHTML = "Alarm Set";
   let id =
     e.target.parentElement.firstElementChild.nextElementSibling.innerHTML;
   let idDesc =
@@ -66,13 +64,16 @@ const alarm = (e) => {
       .nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
   let userDate = new Date(JSON.parse(localStorage.getItem(id))[2]);
   console.log(userDate, idDesc, idTime);
-  alert("Alarm set for " + userDate.toString().substring(16, 24) + " IST");
   let presentDate = new Date();
   console.log(presentDate);
   let alarmTime = userDate - presentDate;
   console.log(alarmTime);
+  console.log(isNaN(alarmTime))
 
-  if (alarmTime > 0) {
+  if (alarmTime > 0 && !isNaN(alarmTime)) {
+    alert("Alarm set for " + userDate.toString().substring(16, 24) + " IST");
+    e.target.style.background = "green";
+    e.target.innerHTML = "Alarm Set";
     setTimeout(() => {
       console.log("ringing alarm");
       ringAlarm(id, idDesc, idTime);
