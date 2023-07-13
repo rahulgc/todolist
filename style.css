@@ -1,156 +1,163 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
+body {
+  background-color: rgb(40, 61, 61);
+}
+.container {
+  display: block;
+  align-items: center;
+  justify-content: space-around;
+  height: max-content;
+}
+.todocontainer {
+  height: max-content;
+  margin-top: 20px;
+  width: max-content;
+  margin-left: 10px;
+  position: relative;
+}
+.input {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+}
+.submit {
+  margin: 5px;
+  padding: 5px;
+  width: 60px;
+  background: green;
+  color: white;
+}
+.delete {
+  margin: 5px;
+  padding: 5px;
+  width: 60px;
+  background: rgb(128, 0, 0);
+  color: white;
+}
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+  padding: 10px;
+}
+.todoeach {
+  width: max-content;
+  height: max-content;
+  margin: 10px;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 15%;
+}
+.todoeach:hover {
+  transform: scale(1.15, 1.15);
+}
+.del {
+  color: rgb(0, 0, 0);
+  background: red;
+  float: right;
+}
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-weight: 1000;
+}
+.todoeachAlarm {
+  width: 200px;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: 525px;
+  margin-top: 150px;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  color: red;
+  border-radius: 15%;
+}
+.alarm {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.alarm:hover {
+  background-color: green;
+}
+@media only screen and (max-width: 600px) {
+  body {
     background-color: rgb(40, 61, 61);
-
-}
-.container{
-    display: block;
-    align-items: center;
-    justify-content: space-around;
+  }
+  .container {
     height: max-content;
-}
-.todocontainer{
-   height: max-content;
-   margin-top: 20px;
-   width: max-content;
-   margin-left: 10px;
-   position: relative;
-}
-.input{
-    width: 250px;
+    display: block;
+  }
+  .todocontainer {
+    height: max-content;
+    margin-top: 20px;
+    width: 25%;
+    margin-left: 10px;
+  }
+  .input {
+    width: 300px;
     margin: 10px;
     padding: 10px;
-}
-.submit{
+  }
+  .submit {
     margin: 5px;
     padding: 5px;
     width: 60px;
     background: green;
     color: white;
-}
-.delete{
+  }
+  .delete {
     margin: 5px;
     padding: 5px;
     width: 60px;
     background: rgb(128, 0, 0);
     color: white;
-}
-.display{
+  }
+  .display {
     display: flex;
     flex-wrap: wrap;
     margin: 40px;
     padding: 10px;
-}
-.todoeach{
+  }
+  .todoeach {
     width: max-content;
     height: max-content;
     margin: 10px;
     padding: 10px;
     background: rgb(255, 255, 255);
     border-radius: 15%;
-}
-.todoeach:hover{
-    transform: scale(1.15,1.15);
-}
-.del{
+  }
+  .todoeach:hover {
+    transform: scale(1.1, 1.1);
+  }
+  .del {
     color: rgb(0, 0, 0);
     background: red;
     float: right;
+  }
 }
-.heading{
+@media only screen and (max-width: 1080px) {
+  .display {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: rgb(255, 255, 255);
-    font-weight: 1000;
-}
-.todoeachAlarm{
-    width: 200px;
+    flex-wrap: wrap;
+    margin: 40px;
+    padding: 10px;
+  }
+  .todoeach {
+    width: max-content;
     height: max-content;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     margin: 10px;
     padding: 10px;
-    background: rgb(254, 0, 0);
+    background: rgb(255, 255, 255);
     border-radius: 15%;
-}
-@media only screen and (max-width:600px) {
-
-    body{
-        background-color: rgb(40, 61, 61);
-    
-    }
-    .container{
-        height: max-content;
-        display: block;
-    }
-    .todocontainer{
-       height: max-content;
-       margin-top: 20px;
-       width: 25%;
-       margin-left: 10px;
-    }
-    .input{
-        width: 300px;
-        margin: 10px;
-        padding: 10px;
-    }
-    .submit{
-        margin: 5px;
-        padding: 5px;
-        width: 60px;
-        background: green;
-        color: white;
-    }
-    .delete{
-        margin: 5px;
-        padding: 5px;
-        width: 60px;
-        background: rgb(128, 0, 0);
-        color: white;
-    }
-    .display{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 40px;
-        padding: 10px;
-    }
-    .todoeach{
-        width: max-content;
-        height: max-content;
-        margin: 10px;
-        padding: 10px;
-        background: rgb(255, 255, 255);
-        border-radius: 15%;
-    }
-    .todoeach:hover{
-        transform:scale(1.1,1.1);
-    }
-    .del{
-        color: rgb(0, 0, 0);
-        background: red;
-        float: right;
-    }
-    
-}
-@media only screen and (max-width:1080px) {
-    .display{
-        display: flex;
-        flex-wrap: wrap;
-        margin: 40px;
-        padding: 10px;
-    }
-    .todoeach{
-        width: max-content;
-        height: max-content;
-        margin: 10px;
-        padding: 10px;
-        background: rgb(255, 255, 255);
-        border-radius: 15%;
-    }
+  }
 }
