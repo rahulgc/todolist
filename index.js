@@ -1,3 +1,5 @@
+//Add todo
+
 document.getElementById("submit").addEventListener("click", (e) => {
   e.preventDefault();
   let todo = document.getElementById("input").value;
@@ -12,11 +14,17 @@ document.getElementById("submit").addEventListener("click", (e) => {
   document.getElementById("desc").value = "";
   document.getElementById("date").value = "";
 });
+
+//Clear All todo
+
 document.getElementById("delete").addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.clear();
   document.getElementById("display").innerHTML = "";
 });
+
+//display todo
+
 if (localStorage.length > 0) {
   for (let i = 0; i < localStorage.length; i++) {
     document.getElementById("display").innerHTML += `<div class="todoeach">
@@ -32,13 +40,17 @@ if (localStorage.length > 0) {
 </div>`;
   }
 }
+// delete individual todo
+
 const del = (e) => {
   e.preventDefault();
   let id = e.target.nextElementSibling.innerHTML;
   console.log(id);
   localStorage.removeItem(id);
-  // location.reload();
+  location.reload();
 };
+
+//alarm functionality
 
 const alarm = (e) => {
   e.preventDefault();
@@ -71,7 +83,6 @@ const alarm = (e) => {
 };
 const ringAlarm = (id, idDesc, idTime) => {
   console.log("Audio ringing");
-  alert(`${id} : ${idDesc}`);
   let audio = new Audio("clock-alarm-8761.mp3");
   audio.play();
   document.getElementById("container").innerHTML = `<div class="todoeachAlarm">
